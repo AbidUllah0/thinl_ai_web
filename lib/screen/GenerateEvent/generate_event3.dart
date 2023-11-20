@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project22/widget/appbar.dart';
+import 'package:project22/widget/app_bar/appbar.dart';
 
-import '../../widget/colors.dart';
-import '../../widget/customtext.dart';
-import '../../widget/textformfield.dart';
+import '../../utils/app_colors/colors.dart';
+import '../../widget/custom_text/customtext.dart';
+import '../../widget/custom_text_field/textformfield.dart';
 
 class GenerateEvent3 extends StatefulWidget {
    const GenerateEvent3({super.key});

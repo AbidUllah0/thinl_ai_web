@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project22/widget/colors.dart';
-import 'package:project22/widget/customtext.dart';
+import 'package:project22/utils/app_colors/colors.dart';
+import 'package:project22/widget/custom_text/customtext.dart';
 import 'package:project22/widget/eventscontainer.dart';
 
-import '../../../widget/appbar.dart';
+import '../../widget/app_bar/appbar.dart';
 import '../../../widget/graph/data.dart';
 import '../../../widget/graph/graph.dart';
 

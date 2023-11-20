@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:project22/widget/colors.dart';
+import 'package:project22/utils/app_colors/colors.dart';
 import 'data.dart';
 
 class Graph extends StatelessWidget {
