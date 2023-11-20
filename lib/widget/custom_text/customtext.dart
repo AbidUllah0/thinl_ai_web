@@ -8,9 +8,11 @@ class CustomText extends StatelessWidget {
   final FontWeight fontWeight;
   final TextAlign textAlign;
   final double letterSpacing;
+  TextStyle? style;
 
-  const CustomText({
+   CustomText({
     Key? key,
+    this.style,
     required this.text,
     this.fontSize = 16.0,
     this.letterSpacing = 1,
@@ -23,12 +25,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: fontSize,
-        color: color,
-        fontWeight: fontWeight,
-        letterSpacing: letterSpacing,
-      ),
+      style: style,
       textAlign: textAlign,
     );
   }

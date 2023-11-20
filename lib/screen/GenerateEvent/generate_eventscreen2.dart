@@ -48,7 +48,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const Align(
+                     Align(
                       alignment: Alignment.centerLeft,
                       child: CustomText(
                         text: 'Generate Event Template',
