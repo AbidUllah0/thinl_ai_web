@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/HomePage.dart';
-import 'package:project22/screen/Login/login_page.dart';
+import 'package:project22/screen/drawer/drawer.dart';
+
+
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home:  const MyHomePage(),
+          home:  const CustomDrawer(),
         );
       },
     );

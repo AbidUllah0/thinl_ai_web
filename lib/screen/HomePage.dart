@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project22/widget/colors.dart';
+import 'package:project22/utils/app_colors/colors.dart';
 import '../widget/drawer.dart';
 import 'GenerateEvent/generate_event.dart';
 import 'GenerateEvent/generate_event3.dart';

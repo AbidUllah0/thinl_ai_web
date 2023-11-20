@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project22/widget/colors.dart';
-import '../../../widget/textformfield.dart';
+import 'package:project22/utils/app_colors/colors.dart';
+import '../../widget/custom_text_field/textformfield.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
