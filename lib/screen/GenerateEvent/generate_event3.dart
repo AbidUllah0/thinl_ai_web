@@ -45,7 +45,7 @@ class _GenerateEvent3State extends State<GenerateEvent3> {
                       style:  const ButtonStyle(backgroundColor: MaterialStatePropertyAll(AppColors.primary),
                           padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 40, vertical: 20))
                       ),
-                      child: const CustomText(
+                      child:  CustomText(
                         text: 'Send',
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
