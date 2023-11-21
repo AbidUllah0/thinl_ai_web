@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.max,
             children: [
               MediaQuery.of(context).size.width > 800
-                  ? const DrawerWidget()
+                  ? const Drawer()
                   : Container(), // An empty container when the width is less than or equal to 800
                const Expanded(child: GenerateEventScreen()),
             ],
