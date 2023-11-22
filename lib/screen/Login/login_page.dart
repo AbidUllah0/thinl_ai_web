@@ -361,7 +361,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 height: screenHeight * 0.03,
                               ),
                               ElevatedButton.icon(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.to(() => CustomDrawer);
+                                },
                                 icon: Image.asset(
                                   AppImages.addUser,
                                   scale: screenWidth * 0.02,
