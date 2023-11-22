@@ -17,4 +17,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.textGreyColor,
   );
+
+  // heading Style
+  static TextStyle mainHeadingStyle = TextStyle(
+    color: AppColors.primary,
+    fontSize: 28,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
 }

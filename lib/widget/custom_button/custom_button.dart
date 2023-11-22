@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:project22/utils/app_colors/colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -8,7 +9,7 @@ class CustomButton extends StatelessWidget {
   final Function()? onPressed;
   double height;
   double width;
-  TextStyle ?style;
+  TextStyle? style;
 
   CustomButton(
       {super.key,
@@ -26,6 +27,7 @@ class CustomButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
+        border: Border.all(width: 1, color: AppColors.primary),
         color: backgroundColor,
         borderRadius: BorderRadius.circular(5),
       ),

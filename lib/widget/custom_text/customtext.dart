@@ -10,7 +10,7 @@ class CustomText extends StatelessWidget {
   final double letterSpacing;
   TextStyle? style;
 
-   CustomText({
+  CustomText({
     Key? key,
     this.style,
     required this.text,
