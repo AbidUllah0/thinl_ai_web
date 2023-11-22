@@ -26,4 +26,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     height: 0,
   );
+
+  ///Button Text Style
+  static TextStyle hintStyle = TextStyle(
+    color: Color(0xFF666666),
+    fontSize: 16,
+    fontFamily: 'Source Sans Pro',
+    fontWeight: FontWeight.w400,
+    height: 0.07,
+  );
 }
