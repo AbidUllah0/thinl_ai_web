@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:horizontal_stepper_flutter/horizontal_stepper_flutter.dart';
+import 'package:project22/utils/app_colors/colors.dart';
 
 class StepperScreen extends StatelessWidget {
-  const StepperScreen({super.key});
+  final int currentStep;
+  const StepperScreen({super.key, required this.currentStep});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Center(
+          child: Transform.scale(
+            scale: 0.8,
             child: FlutterHorizontalStepper(
-              titleStyle: TextStyle(
-                color: Colors.blueAccent
-              ),
+              titleStyle: TextStyle(color: Colors.blueAccent),
               steps: const [
                 "Invitation",
                 "Registration",
@@ -23,68 +24,73 @@ class StepperScreen extends StatelessWidget {
                 "Ideas Submit",
                 "Event Day"
               ],
-              radius: 45,thickness: 3,
-              completeStepColor: Colors.grey,
-              inActiveStepColor: Colors.black,
-
-              currentStep: 3,
+              radius: 45,
+              thickness: 1,
+              currentStepColor: Color(0xFFC3C3C3),
+              completeStepColor: AppColors.primary,
+              inActiveStepColor: Color(0xFFC3C3C3),
+              currentStep: currentStep,
               child: [
                 Container(
-
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                      color: Colors.blueAccent,
-                      width: 10
+                  width: 18,
+                  height: 18,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFC3C3C3),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 10
+                  width: 18,
+                  height: 18,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFC3C3C3),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 10
+                  width: 18,
+                  height: 18,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFC3C3C3),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 10
+                  width: 18,
+                  height: 18,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFC3C3C3),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 10
+                  width: 18,
+                  height: 18,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFC3C3C3),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    color: Colors.black,
                   ),
                 ),
               ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

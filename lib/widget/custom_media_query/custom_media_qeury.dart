@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomMediaQuery {
   static MediaQueryData? _mediaQueryData;
-  static late double screenWidth;
-  static late double screenHeight;
+  static double screenWidth = 0;
+  static double screenHeight = 0;
 
   static void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);

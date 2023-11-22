@@ -11,6 +11,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: AppColors.whiteColor,
       elevation: 2,
       shadowColor: Colors.black26,
       backgroundColor: Colors.white,
@@ -26,7 +27,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         buildAddEventButton(),
         IconButton(
-          icon: const Icon(Icons.notifications_none, color: AppColors.primary, size: 30),
+          icon: const Icon(Icons.notifications_none,
+              color: AppColors.primary, size: 30),
           onPressed: () {},
         ),
         buildProfileAvatar(),
@@ -37,6 +39,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   Widget buildSearchTextField(BuildContext context) {
     return TextField(
+      
       decoration: InputDecoration(
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.2,
@@ -48,7 +51,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         hintText: 'Search event or anything',
         hintStyle: TextStyle(color: Colors.grey.shade300),
-        contentPadding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
+        contentPadding:
+            EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(2),
@@ -58,15 +62,18 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget buildAddEventButton() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ElevatedButton(
-        onPressed: () {},
-        child: const Text(
-          'Add Event',
-          style: TextStyle(color: Colors.white),
-          textWidthBasis: TextWidthBasis.longestLine,
-        ),
+    return Container(
+      width: 128,
+      height: 49,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 14),
+      decoration: ShapeDecoration(
+        color: Color(0xFF3871C1),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      ),
+      child: Text(
+        'Add Event',
+        style: TextStyle(color: Colors.white),
+        textWidthBasis: TextWidthBasis.longestLine,
       ),
     );
   }

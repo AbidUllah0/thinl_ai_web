@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 import '../app_colors/colors.dart';
 
@@ -29,10 +29,23 @@ class AppTextStyles {
 
   ///Button Text Style
   static TextStyle hintStyle = TextStyle(
-    color: Color(0xFF666666),
+    color: AppColors.black,
     fontSize: 16,
     fontFamily: 'Source Sans Pro',
     fontWeight: FontWeight.w400,
-    height: 0.07,
+  );
+
+  static TextStyle headingTwo = TextStyle(
+    color: Color(0xFF3871C1),
+    fontSize: 20,
+    fontFamily: 'Source Sans Pro',
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle smallheadingtable = TextStyle(
+    color: AppColors.textWhiteColor,
+    fontSize: 20,
+    fontFamily: 'Source Sans Pro',
+    fontWeight: FontWeight.w600,
   );
 }
