@@ -1,10 +1,11 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project22/utils/app_colors/colors.dart';
+import 'package:project22/widget/app_bar/appbar.dart';
+import 'package:project22/widget/custom_text/customtext.dart';
 import 'package:project22/widget/custom_text_field/textformfield.dart';
 
-import '../../widget/app_bar/appbar.dart';
-import '../../utils/app_colors/colors.dart';
-import '../../widget/custom_text/customtext.dart';
 
 class GenerateEventScreen2 extends StatefulWidget {
    const GenerateEventScreen2({super.key,});
@@ -137,7 +138,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                 Container(
                                     width: MediaQuery.of(context).size.width * 0.438,
                                     child: CustomTextFormField(
-                                        icon: Icons.send,
+                                        suffixIcon: Icons.send,
                                         onPressed: () {
                                           if (sendMessage.text.isNotEmpty) {
                                             setState(() {
@@ -146,7 +147,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                             });
                                           }
                                         },
-                                        labelText: "Enter Your Message", controller: sendMessage)),
+                                        hintText: "Enter Your Message", controller: sendMessage)),
 
 
                               ],
@@ -182,7 +183,7 @@ Widget _buildFormField(BuildContext context, String label, String text, TextEdit
           ),
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-        CustomTextFormField(labelText: text, controller: controller),
+        CustomTextFormField(hintText: text, controller: controller),
         SizedBox(height: MediaQuery.of(context).size.height * 0.029,),
 
       ],

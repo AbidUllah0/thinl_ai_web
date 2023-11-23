@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project22/screen/drawer/drawer.dart';
@@ -222,7 +223,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               ElevatedButton.icon(
                                 onPressed: () {
-                                  Get.to(() => CustomDrawer());
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CustomDrawer()),
+                                  );
                                 },
                                 icon: Image.asset(
                                   AppImages.login,
@@ -361,9 +366,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 height: screenHeight * 0.03,
                               ),
                               ElevatedButton.icon(
-                                onPressed: () {
-                                  Get.to(() => CustomDrawer);
-                                },
+                                onPressed: () {},
                                 icon: Image.asset(
                                   AppImages.addUser,
                                   scale: screenWidth * 0.02,

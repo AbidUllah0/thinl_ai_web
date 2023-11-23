@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project22/utils/app_images/app_images.dart';
 
 import '../../utils/app_colors/colors.dart';
 
@@ -11,6 +12,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: AppColors.whiteColor,
       elevation: 2,
       shadowColor: Colors.black26,
       backgroundColor: Colors.white,
@@ -26,7 +28,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         buildAddEventButton(),
         IconButton(
-          icon: const Icon(Icons.notifications_none, color: AppColors.primary, size: 30),
+          icon: const Icon(Icons.notifications_none,
+              color: AppColors.primary, size: 30),
           onPressed: () {},
         ),
         buildProfileAvatar(),
@@ -36,37 +39,45 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget buildSearchTextField(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.2,
-          maxHeight: MediaQuery.of(context).size.height * 0.048,
-        ),
-        suffixIcon: IconButton(
-          icon: Icon(Icons.search, color: Colors.grey.shade600),
-          onPressed: () {},
-        ),
-        hintText: 'Search event or anything',
-        hintStyle: TextStyle(color: Colors.grey.shade300),
-        contentPadding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(2),
+    return Container(
+      color: AppColors.whiteColor,
+      child: TextField(
+        decoration: InputDecoration(
+          fillColor: AppColors.whiteColor,
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width * 0.2,
+            maxHeight: MediaQuery.of(context).size.height * 0.048,
+          ),
+          suffixIcon: IconButton(
+            icon: Icon(Icons.search, color: Colors.grey.shade600),
+            onPressed: () {},
+          ),
+          hintText: 'Search event or anything',
+          hintStyle: TextStyle(color: Colors.grey.shade300),
+          contentPadding:
+              EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(2),
+          ),
         ),
       ),
     );
   }
 
   Widget buildAddEventButton() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ElevatedButton(
-        onPressed: () {},
-        child: const Text(
-          'Add Event',
-          style: TextStyle(color: Colors.white),
-          textWidthBasis: TextWidthBasis.longestLine,
-        ),
+    return Container(
+      // width: 128,
+      // height: 45,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      decoration: ShapeDecoration(
+        color: Color(0xFF3871C1),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      ),
+      child: Text(
+        'Add Event',
+        style: TextStyle(color: Colors.white),
+        textWidthBasis: TextWidthBasis.longestLine,
       ),
     );
   }
@@ -75,7 +86,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 10),
       child: CircleAvatar(
-        backgroundImage: AssetImage('images/profile.png'),
+        backgroundImage: AssetImage(AppImages.profile),
       ),
     );
   }
