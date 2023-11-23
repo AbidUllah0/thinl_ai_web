@@ -38,4 +38,19 @@ class AppImages {
 
   static const notificationcircleImage =
       "assets/images/png/notification_circle.png";
+  // static const report = "assets/images/png/report.png";
+  // static const ideasDiscuss = "assets/images/png/discussion.png";
+  // static const benchmarks = "assets/images/png/bench_marks.png";
+  // static const settings = "assets/images/png/settings.png";
+  // static const logout = "assets/images/png/logout.png";
+  // static const login = "assets/images/png/login.png";
+
+  ///abid
+  static String event = 'assets/images/png/event.png';
+  static String event1 = 'assets/images/png/event1.png';
+  static String event2 = 'assets/images/png/event2.png';
+  static String avatar1 = 'assets/images/png/avatar1.png';
+  static String avatar2 = 'assets/images/png/avatar2.png';
+  static String avatar3 = 'assets/images/png/avatar3.png';
+  static String avatar4 = 'assets/images/png/avatar4.png';
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project22/provider/feedback_controller.dart';
-import 'package:project22/screen/participants_admin/feed_back_screen/components/custom_checkbox.dart';
+import 'package:project22/screen/feed_back_screen/components/custom_checkbox.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:provider/provider.dart';
 

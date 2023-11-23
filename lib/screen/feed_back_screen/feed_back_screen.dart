@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:project22/main.dart';
-import 'package:project22/screen/participants_admin/feed_back_screen/components/message_box_widget.dart';
-import 'package:project22/screen/participants_admin/feed_back_screen/components/option_one.dart';
-import 'package:project22/screen/participants_admin/feed_back_screen/components/option_two.dart';
-import 'package:project22/screen/participants_admin/feed_back_screen/components/rating_star_widget.dart';
+import 'package:project22/screen/feed_back_screen/components/message_box_widget.dart';
+import 'package:project22/screen/feed_back_screen/components/option_one.dart';
+import 'package:project22/screen/feed_back_screen/components/option_two.dart';
+import 'package:project22/screen/feed_back_screen/components/rating_star_widget.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';

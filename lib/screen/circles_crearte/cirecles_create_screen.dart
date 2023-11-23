@@ -4,7 +4,6 @@ import 'package:project22/utils/app_constants/app_constant.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/app_bar/appbar.dart';
 import 'package:project22/widget/custom_button/custom_button.dart';
-import 'package:project22/widget/custom_media_query/custom_media_qeury.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 import 'package:project22/widget/stepper_widget.dart/stepper_widget.dart';
 

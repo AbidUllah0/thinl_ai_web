@@ -43,6 +43,7 @@ dependencies:
   speech_to_text: ^6.4.1
   step_indicator: ^0.0.1
   video_player: ^2.8.1
+  syncfusion_flutter_charts: ^23.1.44
 
 dev_dependencies:
   flutter_lints: ^2.0.0

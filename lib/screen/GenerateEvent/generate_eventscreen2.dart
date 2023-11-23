@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project22/utils/app_colors/colors.dart';
@@ -137,7 +138,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                 Container(
                                     width: MediaQuery.of(context).size.width * 0.438,
                                     child: CustomTextFormField(
-                                        icon: Icons.send,
+                                        suffixIcon: Icons.send,
                                         onPressed: () {
                                           if (sendMessage.text.isNotEmpty) {
                                             setState(() {
@@ -146,7 +147,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                             });
                                           }
                                         },
-                                        labelText: "Enter Your Message", controller: sendMessage)),
+                                        hintText: "Enter Your Message", controller: sendMessage)),
 
 
                               ],
@@ -182,7 +183,7 @@ Widget _buildFormField(BuildContext context, String label, String text, TextEdit
           ),
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-        CustomTextFormField(labelText: text, controller: controller),
+        CustomTextFormField(hintText: text, controller: controller),
         SizedBox(height: MediaQuery.of(context).size.height * 0.029,),
 
       ],

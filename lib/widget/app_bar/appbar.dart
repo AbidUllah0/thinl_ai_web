@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project22/utils/app_images/app_images.dart';
 
 import '../../utils/app_colors/colors.dart';
 
@@ -82,7 +83,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 10),
       child: CircleAvatar(
-        backgroundImage: AssetImage('images/profile.png'),
+        backgroundImage: AssetImage(AppImages.profile),
       ),
     );
   }

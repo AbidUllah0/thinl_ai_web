@@ -55,7 +55,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Search',
+                                hintText: 'Search',
                                 controller: EventNameController)
                           ],
                         ),
@@ -76,7 +76,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Date', controller: dateController)
+                                hintText: 'Date', controller: dateController)
                           ],
                         ),
                       ),
@@ -96,7 +96,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Time', controller: TimeController),
+                                hintText: 'Time', controller: TimeController),
                           ],
                         ),
                       ),
@@ -124,7 +124,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Search',
+                                hintText: 'Search',
                                 controller: languageController)
                           ],
                         ),
@@ -145,7 +145,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Date',
+                                hintText: 'Date',
                                 controller: resultlengthController)
                           ],
                         ),
@@ -166,7 +166,7 @@ class GenerateEventScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.01,
                             ),
                             CustomTextFormField(
-                                labelText: 'Time', controller: voteController),
+                                hintText: 'Time', controller: voteController),
                           ],
                         ),
                       ),
