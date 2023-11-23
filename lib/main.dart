@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => EventScreenProvider()),
         ChangeNotifierProvider(create: (_) => CheckboxController()),
+        ChangeNotifierProvider(create: (_) => CheckboxController2()),
+        ChangeNotifierProvider(create: (_) => SpeechProvider()),
         ChangeNotifierProvider(create: (_) => IdeasControllers()),
       ],
       child: MaterialApp(

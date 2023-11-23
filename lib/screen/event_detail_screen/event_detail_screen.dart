@@ -14,14 +14,14 @@ class EventDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //  late int currentValue = 0;
     return Scaffold(
         appBar: MyAppBar(),
         backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
         body: Container(
           margin: EdgeInsets.symmetric(
-              horizontal: CustomMediaQuery.responsiveWidth(2),
-              vertical: CustomMediaQuery.responsiveHeight(5)),
+            horizontal: MediaQuery.of(context).size.height * 2 / 100,
+            vertical: MediaQuery.of(context).size.height * 5 / 100,
+          ),
           child: SingleChildScrollView(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -49,13 +49,10 @@ class EventDetailScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Expanded(
-                          flex: 2,
-                          // width: CustomMediaQuery.responsiveWidth(10),
-                          child: CountdownTimer()),
-                      SizedBox(
-                        width: CustomMediaQuery.responsiveWidth(20),
-                      ),
+                      Expanded(flex: 2, child: CountdownTimer()),
+                      // SizedBox(
+                      //   width: CustomMediaQuery.responsiveWidth(20),
+                      // ),
                       Expanded(
 
                           // width: CustomMediaQuery.responsiveWidth(5),

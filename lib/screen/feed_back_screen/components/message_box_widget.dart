@@ -17,13 +17,12 @@ class MessageBoxWidget extends StatelessWidget {
         provider.initializeSpeech();
       }
       return Container(
-        height: 0.3,
+        height: 150,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            side: BorderSide(
-                width: 1, color: AppColors.grey.withOpacity(0.3)),
+            side: BorderSide(width: 1, color: AppColors.grey.withOpacity(0.3)),
             borderRadius: BorderRadius.circular(5.0),
           ),
         ),
@@ -43,8 +42,7 @@ class MessageBoxWidget extends StatelessWidget {
                       ? 'Listening....'
                       : 'Enter your Message',
                   hintStyle: AppTextStyles.hintStyle.copyWith(
-                      fontSize: 12,
-                      color: AppColors.grey.withOpacity(0.5)),
+                      fontSize: 12, color: AppColors.grey.withOpacity(0.5)),
                   border: InputBorder.none,
                 ),
               ),

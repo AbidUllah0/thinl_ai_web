@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project22/utils/app_colors/colors.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 
 class GroupContainer extends StatelessWidget {
@@ -16,15 +17,13 @@ class GroupContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: AppColors.borderColor,
+          color: AppColors.borderColor.withOpacity(0.6),
         ),
       ),
       child: CustomText(
         text: groupNo,
         fontWeight: FontWeight.w700,
-        fontFamily: 'Source Sans Pro',
-        fontSize: 18,
-        color: AppColors.primary,
+        style: AppTextStyles.headingTwo,
       ),
     );
   }

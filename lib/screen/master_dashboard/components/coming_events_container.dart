@@ -17,7 +17,7 @@ class ComingEventsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.2,
+      width: MediaQuery.of(context).size.width * 0.17,
       margin: EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
@@ -25,6 +25,7 @@ class ComingEventsContainer extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Events Name',

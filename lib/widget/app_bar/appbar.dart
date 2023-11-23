@@ -39,24 +39,27 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget buildSearchTextField(BuildContext context) {
-    return TextField(
-      
-      decoration: InputDecoration(
-        constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.2,
-          maxHeight: MediaQuery.of(context).size.height * 0.048,
-        ),
-        suffixIcon: IconButton(
-          icon: Icon(Icons.search, color: Colors.grey.shade600),
-          onPressed: () {},
-        ),
-        hintText: 'Search event or anything',
-        hintStyle: TextStyle(color: Colors.grey.shade300),
-        contentPadding:
-            EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(2),
+    return Container(
+      color: AppColors.whiteColor,
+      child: TextField(
+        decoration: InputDecoration(
+          fillColor: AppColors.whiteColor,
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width * 0.2,
+            maxHeight: MediaQuery.of(context).size.height * 0.048,
+          ),
+          suffixIcon: IconButton(
+            icon: Icon(Icons.search, color: Colors.grey.shade600),
+            onPressed: () {},
+          ),
+          hintText: 'Search event or anything',
+          hintStyle: TextStyle(color: Colors.grey.shade300),
+          contentPadding:
+              EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(2),
+          ),
         ),
       ),
     );
@@ -64,9 +67,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   Widget buildAddEventButton() {
     return Container(
-      width: 128,
-      height: 49,
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 14),
+      // width: 128,
+      // height: 45,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       decoration: ShapeDecoration(
         color: Color(0xFF3871C1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),

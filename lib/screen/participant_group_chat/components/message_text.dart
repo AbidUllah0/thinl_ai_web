@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 
 class MessageText extends StatelessWidget {
@@ -27,16 +28,13 @@ class MessageText extends StatelessWidget {
               CustomText(
                 text: AppTexts.customLoremText,
                 fontFamily: 'Source Sans Pro',
-                fontSize: 14,
-                color: AppColors.grey,
-                fontWeight: FontWeight.w400,
+                style: AppTextStyles.hintStyle,
               ),
               CustomText(
                 text: '#542d124212',
                 fontFamily: 'Source Sans Pro',
-                fontSize: 12,
-                color: AppColors.primary,
-                fontWeight: FontWeight.w400,
+                style: AppTextStyles.hintStyle
+                    .copyWith(color: AppColors.secondary),
               ),
             ],
           ),

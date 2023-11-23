@@ -26,124 +26,169 @@ class FeedBackScreen extends StatelessWidget {
         physics: ClampingScrollPhysics(),
         child: Container(
           margin: EdgeInsets.all(25),
-          child: Column(
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 0.1,
-              ),
-              Text(
-                AppTexts.generate_events_template_text1,
-                style: AppTextStyles.hintStyle,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              OptionOne(),
-              SizedBox(
-                height: 0.05,
-              ),
-              Text(
-                AppTexts.generate_events_template_text1,
-                style: AppTextStyles.hintStyle,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              OptionTwo(),
-              SizedBox(
-                height: 0.1,
-              ),
-              Text(
-                AppTexts.generate_events_template_text1,
-                style: AppTextStyles.hintStyle,
-              ),
-              SizedBox(
-                height: 0.02,
-              ),
-              RatingBar.builder(
-                initialRating: 3,
-                minRating: 1,
-                // glowColor: AppColors.greyParagraphColor,
-                unratedColor: AppColors.black.withOpacity(0.1),
-                glowColor: Colors.yellow,
-                allowHalfRating: true,
-                itemSize: 28,
-                itemCount: 5,
-                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => const Icon(
-                  Icons.star,
-                  size: 5,
-                  color: Colors.yellow,
-                ),
-                onRatingUpdate: (rating) {
-                  // print(rating);
-                },
-              ),
-              SizedBox(
-                height: 0.02,
-              ),
-              CustomText(
-                text: AppTexts.generate_events_template_text1,
-                style: AppTextStyles.hintStyle,
-              ),
-              SizedBox(
-                height: 0.02,
-              ),
-              SizedBox(
-                width: 0.5,
+              Expanded(
+                flex: 3,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RatingStar(
-                      stars: "5 Stars",
-                      value: 0.1,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 35),
+                      child: CustomText(
+                        text: 'FeedBack Form',
+                        style: AppTextStyles.mainHeadingStyle,
+                      ),
                     ),
-                    RatingStar(
-                      stars: "4 Stars",
-                      value: 0.3,
+                    SizedBox(
+                      height: 10,
                     ),
-                    RatingStar(
-                      stars: "3 Stars",
-                      value: 0.5,
+                    Text(
+                      AppTexts.customLoremText,
+                      style: AppTextStyles.hintStyle,
                     ),
-                    RatingStar(
-                      stars: "2 Stars",
-                      value: 0.7,
+                    SizedBox(
+                      height: 10,
                     ),
-                    RatingStar(
-                      stars: "1 Stars",
-                      value: 8,
+                    OptionOne(),
+                    SizedBox(
+                      height: 10,
                     ),
+                    Text(
+                      AppTexts.customLoremText,
+                      style: AppTextStyles.hintStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    OptionTwo(),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      AppTexts.customLoremText,
+                      style: AppTextStyles.hintStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    RatingBar.builder(
+                      initialRating: 3,
+                      minRating: 1,
+                      // glowColor: AppColors.greyParagraphColor,
+                      unratedColor: AppColors.black.withOpacity(0.1),
+                      glowColor: Colors.yellow,
+                      allowHalfRating: true,
+                      itemSize: 28,
+                      itemCount: 5,
+                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                      itemBuilder: (context, _) => const Icon(
+                        Icons.star,
+                        size: 5,
+                        color: Colors.yellow,
+                      ),
+                      onRatingUpdate: (rating) {
+                        // print(rating);
+                      },
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    CustomText(
+                      text: AppTexts.generate_events_template_text1,
+                      style: AppTextStyles.hintStyle,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 50 / 100,
+                      child: Column(
+                        children: [
+                          RatingStar(
+                            stars: "5 Stars",
+                            value: 0.1,
+                          ),
+                          RatingStar(
+                            stars: "4 Stars",
+                            value: 0.3,
+                          ),
+                          RatingStar(
+                            stars: "3 Stars",
+                            value: 0.5,
+                          ),
+                          RatingStar(
+                            stars: "2 Stars",
+                            value: 0.7,
+                          ),
+                          RatingStar(
+                            stars: "1 Stars",
+                            value: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    CustomText(
+                      text: "Share Your Opinions",
+                      style: AppTextStyles.hintStyle,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    MessageBoxWidget(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Ourbotton(
+                            text: "Submit",
+                            height: 35,
+                            width: 70,
+                            backgroundColor: AppColors.primary,
+                            borderRadius: 5,
+                            textStyle: AppTextStyles.hintStyle
+                                .copyWith(color: AppColors.whiteColor))
+                      ],
+                    )
                   ],
                 ),
               ),
-              SizedBox(
-                height: 0.1,
-              ),
-              CustomText(
-                text: "Share Your Opinions",
-                style: AppTextStyles.hintStyle,
-              ),
-              SizedBox(
-                height: 0.02,
-              ),
-              MessageBoxWidget(),
-              SizedBox(
-                height: 0.02,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Ourbotton(
-                      text: "Submit",
-                      height: 35,
-                      width: 0.35,
-                      backgroundColor: AppColors.primary,
-                      borderRadius: 5,
-                      textStyle: AppTextStyles.hintStyle
-                          .copyWith(color: AppColors.whiteColor))
+                  CustomText(
+                    text: "User Code",
+                    style: AppTextStyles.hintStyle
+                        .copyWith(color: AppColors.secondary),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      color: Colors.white, // Filled color
+                      border: Border.all(
+                        color: AppColors.secondary, // Border color
+                      ),
+                    ),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: '',
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(
+                            vertical: 15.0, horizontal: 20.0),
+                      ),
+                      style: TextStyle(color: Colors.black), // Text color
+                    ),
+                  ),
                 ],
-              )
+              ))
             ],
           ),
         ),

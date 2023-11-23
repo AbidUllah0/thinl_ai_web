@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project22/screen/ai_generate_ideas/ai_generate_ideas.dart';
 import 'package:project22/screen/circles_crearte/cirecles_create_screen.dart';
 import 'package:project22/screen/circles_screen/simple_cirecle_screen.dart';
 import 'package:project22/screen/event_day_screen/event_day_screen.dart';
@@ -9,8 +10,6 @@ import 'package:project22/screen/invitation_screen/invitation_screen.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_images/app_images.dart';
 import '../GenerateEvent/generate_event.dart';
-import '../../utils/app_images/app_images.dart';
-import '../../utils/app_colors/colors.dart';
 import '../master_dashboard/master_dashboard_view.dart';
 import '../participant_ai_assistant/participant_ai_assistant.dart';
 import '../participant_all_circle_ideas/participant_al_circle_ideas.dart';
@@ -31,24 +30,26 @@ class _CustomDrawerState extends State<CustomDrawer> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-
     MasterDashboardView(),
-    Container(color: Colors.green),
-    Container(color: Colors.green),
-    Container(color: Colors.green),
-    Container(color: Colors.green),
-    Container(color: Colors.green),
+    GeneratesEventTemplates(),
+    InvitationScreen(),
+    Container(
+      child: Text("profile"),
+    ),
+    Container(child: Text("Registure")),
+    EventDetailScreen(),
     ParticipantAiAssistant(),
-    Container(color: Colors.blue),
+    CirclesCreateScreen(),
+    SimpleCircleScreen(),
     ParticipantGroupChat(),
     ParticipantRankingIdeas(),
     IdeasBriefing(),
     ParticipantAllCircleIdeas(),
-    Container(color: Colors.green),
-    Container(color: Colors.green),
+    AiGenerateIdeas(),
+    EventDayScreen(),
     EventTopIdea(),
     TopFiveSteps(),
-    Container(color: Colors.yellow),
+    FeedBackScreen(),
     Container(color: Colors.green),
     Container(color: Colors.red),
   ];
@@ -56,6 +57,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -129,41 +131,45 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       title: "Circles Details"),
                   buildDrawerItem(
                       index: 9,
+                      image: AppImages.circlesCreate,
+                      title: "Group Chat"),
+                  buildDrawerItem(
+                      index: 10,
                       image: AppImages.rankingIdeas,
                       title: "Ranking Ideas"),
                   buildDrawerItem(
-                      index: 10,
+                      index: 11,
                       image: AppImages.ideasBriefing,
                       title: "Ideas Briefing"),
                   buildDrawerItem(
-                      index: 11,
+                      index: 12,
                       image: AppImages.allCirclesIdeas,
                       title: "All Circles Ideas"),
                   buildDrawerItem(
-                      index: 12,
+                      index: 13,
                       image: AppImages.genAIIdea,
                       title: "Gen AI Idea"),
                   buildDrawerItem(
-                      index: 13, image: AppImages.eventDay, title: "Event Day"),
+                      index: 14, image: AppImages.eventDay, title: "Event Day"),
                   buildDrawerItem(
-                      index: 14,
+                      index: 15,
                       image: AppImages.report,
                       title: "Event’s Top Idea"),
                   buildDrawerItem(
-                      index: 15,
+                      index: 16,
                       image: AppImages.ideasDiscuss,
                       title: "5 Steps "),
                   buildDrawerItem(
-                      index: 16,
+                      index: 17,
                       image: AppImages.benchmarks,
                       title: "Report Form"),
                   const SizedBox(
                     height: 196,
                   ),
                   buildDrawerItem(
-                      index: 17, image: AppImages.settings, title: "Settings"),
+                      index: 18, image: AppImages.settings, title: "Settings"),
                   buildDrawerItem(
-                      index: 18, image: AppImages.logout, title: "Log Out"),
+                      index: 19, image: AppImages.logout, title: "Log Out"),
                 ],
               ),
             ),

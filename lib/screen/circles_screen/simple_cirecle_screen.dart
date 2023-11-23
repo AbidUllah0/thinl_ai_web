@@ -30,12 +30,18 @@ class SimpleCircleScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomText(
-                      text: "Circles Create",
+                      text: "Circles",
                       style: AppTextStyles.mainHeadingStyle,
                     ),
                     Row(
                       children: [
-                        Image.asset(AppImages.notificationcircleImage),
+                        Image.asset(
+                          AppImages.notificationcircleImage,
+                          height: 25,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         CustomText(
                           text: "Notification",
                           style: AppTextStyles.hintStyle,

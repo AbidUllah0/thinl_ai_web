@@ -3,8 +3,10 @@ import 'package:project22/screen/participant_all_circle_ideas/components/group_c
 import 'package:project22/screen/participant_all_circle_ideas/components/horizontal_container.dart';
 import 'package:project22/screen/participant_all_circle_ideas/components/ranking_ideas_widget.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/app_bar/appbar.dart';
 import 'package:project22/widget/icon_container/icon_container.dart';
+import 'package:project22/widget/stepper_widget.dart/stepper_widget.dart';
 
 import '../../utils/app_colors/colors.dart';
 import '../../widget/custom_text/customtext.dart';
@@ -15,23 +17,30 @@ class ParticipantRankingIdeas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
+      appBar: MyAppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MyAppBar(),
+              CustomText(
+                text: "Ranking the Top Ideas",
+                style: AppTextStyles.mainHeadingStyle,
+              ),
+              SizedBox(
+                  height: 120,
+                  child: StepperScreen(
+                    currentStep: 5,
+                  )),
               SizedBox(height: 30),
               CustomText(
                 text: 'Ranking the Top Ideas',
-                fontSize: 28,
-                fontWeight: FontWeight.w700,
-                color: AppColors.primary,
-                fontFamily: 'Montserrat',
+                style: AppTextStyles.mainHeadingStyle,
               ),
               SizedBox(height: 25),
-              GroupContainer(groupNo: "Group No 1"),
+              GroupContainer(groupNo: "Group No 1",),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,

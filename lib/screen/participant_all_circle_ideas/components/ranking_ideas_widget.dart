@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project22/utils/app_colors/colors.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 
 class RankingIdeasWidget extends StatelessWidget {
@@ -19,6 +20,7 @@ class RankingIdeasWidget extends StatelessWidget {
       ),
       child: CustomText(
         text: '#542d124212',
+        style: AppTextStyles.hintStyle.copyWith(color: AppColors.secondary),
       ),
     );
   }

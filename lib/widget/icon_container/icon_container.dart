@@ -15,7 +15,7 @@ class HorizontalContainer extends StatelessWidget {
           height: 40,
           width: 40,
           decoration: BoxDecoration(
-            color: AppColors.primary,
+            color: AppColors.secondary,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(
@@ -26,6 +26,7 @@ class HorizontalContainer extends StatelessWidget {
         IdeaContainer(
           width: MediaQuery.of(context).size.width * 0.5,
           text: AppTexts.customLoremText,
+          
         ),
       ],
     );

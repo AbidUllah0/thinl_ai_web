@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 
 import '../../../utils/app_colors/colors.dart';
 import '../../../utils/app_constants/app_constant.dart';
@@ -45,15 +46,12 @@ class IdeaContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             color: Color(0xffFAFAFA),
             border: Border.all(
-              color: AppColors.primary,
+              color: AppColors.secondary,
             ),
           ),
           child: CustomText(
             text: '#542d124212',
-            fontFamily: 'Source Sans Pro',
-            fontSize: 12,
-            color: AppColors.primary,
-            fontWeight: FontWeight.w400,
+            style: AppTextStyles.hintStyle.copyWith(color: AppColors.secondary),
           ),
         ),
       ],

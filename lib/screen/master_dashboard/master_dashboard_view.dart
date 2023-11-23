@@ -3,6 +3,7 @@ import 'package:project22/screen/master_dashboard/components/chart_component.dar
 import 'package:project22/screen/master_dashboard/components/notification_section.dart';
 import 'package:project22/screen/master_dashboard/components/previous_event.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
+import 'package:project22/widget/app_bar/appbar.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 import 'package:project22/widget/custom_text_field/textformfield.dart';
 
@@ -18,9 +19,11 @@ class MasterDashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
+      appBar: MyAppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(right: 20.0),
+          padding: EdgeInsets.all(30.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,11 +33,12 @@ class MasterDashboardView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomText(
-                      text: 'Dashboard',
-                      fontSize: 26,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.primary,
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      child: CustomText(
+                        text: 'Dashboard',
+                        style: AppTextStyles.headingTwo,
+                      ),
                     ),
                     Row(
                       children: [
@@ -52,15 +56,14 @@ class MasterDashboardView extends StatelessWidget {
                     SizedBox(height: 30),
                     CustomText(
                       text: 'Previous Events',
-                      fontSize: 26,
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w600,
+                      style: AppTextStyles.headingTwo,
                     ),
                     SizedBox(height: 20),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         PreviousEvent(
-                            imgUrl: AppImages.event,
+                            imgUrl: AppImages.event2,
                             eventName: 'Event Name',
                             eventDetail: AppTexts.eventDetail),
                         PreviousEvent(
@@ -76,14 +79,13 @@ class MasterDashboardView extends StatelessWidget {
                     SizedBox(height: 30),
                     CustomText(
                       text: 'Coming Up Events',
-                      color: AppColors.primary,
-                      fontSize: 26,
-                      fontWeight: FontWeight.w600,
+                      style: AppTextStyles.headingTwo,
                     ),
                     SizedBox(height: 20),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Expanded(child: ComingEventsContainer()),
+                        ComingEventsContainer(),
                         ComingEventsContainer(),
                         ComingEventsContainer(),
                       ],
@@ -91,8 +93,10 @@ class MasterDashboardView extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                width: 15,
+              ),
               Expanded(
-                flex: 1,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,

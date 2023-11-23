@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project22/main.dart';
 import 'package:project22/screen/participant_all_circle_ideas/components/group_container.dart';
 import 'package:project22/screen/participant_top_fice_steps/component/reting_step.dart';
+import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/app_bar/appbar.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 import 'package:project22/widget/icon_container/icon_container.dart';
-
 import '../../utils/app_colors/colors.dart';
 
 class TopFiveSteps extends StatelessWidget {
@@ -13,6 +14,8 @@ class TopFiveSteps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyAppBar(),
+      backgroundColor: AppColors.whiteColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.0),
@@ -20,14 +23,10 @@ class TopFiveSteps extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              MyAppBar(),
               SizedBox(height: 30),
               CustomText(
                 text: 'Top 5 Steps',
-                fontSize: 28,
-                fontWeight: FontWeight.w700,
-                color: AppColors.primary,
-                fontFamily: 'Montserrat',
+                style: AppTextStyles.mainHeadingStyle,
               ),
               SizedBox(height: 25),
               Row(
