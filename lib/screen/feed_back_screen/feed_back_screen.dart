@@ -38,7 +38,7 @@ class FeedBackScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 35),
                       child: CustomText(
-                        text: 'FeedBack Form',
+                        text: 'FeedBack Forms',
                         style: AppTextStyles.mainHeadingStyle,
                       ),
                     ),
