@@ -7,7 +7,9 @@ import '../../utils/app_colors/colors.dart';
 import '../../widget/custom_text/customtext.dart';
 
 class GenerateEventScreen2 extends StatefulWidget {
-   const GenerateEventScreen2({super.key,});
+  const GenerateEventScreen2({
+    super.key,
+  });
 
   @override
   State<GenerateEventScreen2> createState() => _GenerateEventScreen2State();
@@ -32,7 +34,6 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
 
   List<String> messages = [];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +49,7 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const Align(
+                    Align(
                       alignment: Alignment.centerLeft,
                       child: CustomText(
                         text: 'Generate Event Template',
@@ -57,12 +58,12 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                         letterSpacing: 2,
                       ),
                     ),
-                    SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
-
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-
                         Material(
                           color: Colors.white,
                           elevation: 2,
@@ -71,32 +72,51 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                           surfaceTintColor: Colors.red,
                           borderRadius: BorderRadius.circular(10),
                           child: Padding(
-                            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                            padding: EdgeInsets.all(
+                                MediaQuery.of(context).size.width * 0.02),
                             child: Column(
                               children: [
-                                _buildFormField(context, 'Event Name', 'Search', EventNameController),
-                                _buildFormField(context, 'Date', 'Date', dateController),
-                                _buildFormField(context, 'Time', 'Time', TimeController),
-                                _buildFormField(context, 'Language', 'Search', languageController),
-                                _buildFormField(context, 'Max Result Length', 'Date', resultlengthController),
-                                _buildFormField(context, 'Tone of Vote', 'Time', voteController),
-                                SizedBox(height: MediaQuery.of(context).size.height * 0.019,),
-                                ElevatedButton(onPressed: () {
-
-                                },
+                                _buildFormField(context, 'Event Name', 'Search',
+                                    EventNameController),
+                                _buildFormField(
+                                    context, 'Date', 'Date', dateController),
+                                _buildFormField(
+                                    context, 'Time', 'Time', TimeController),
+                                _buildFormField(context, 'Language', 'Search',
+                                    languageController),
+                                _buildFormField(context, 'Max Result Length',
+                                    'Date', resultlengthController),
+                                _buildFormField(context, 'Tone of Vote', 'Time',
+                                    voteController),
+                                SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.019,
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {},
                                   style: ButtonStyle(
-                                    padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.06,vertical: MediaQuery.of(context).size.height * 0.03)),
-                                    backgroundColor: MaterialStatePropertyAll(AppColors.primary)
-                                  ),
+                                      padding: MaterialStatePropertyAll(
+                                          EdgeInsets.symmetric(
+                                              horizontal: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.06,
+                                              vertical: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.03)),
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          AppColors.primary)),
                                   child: CustomText(
-                                  text: 'Generate',
-                                  fontSize: MediaQuery.of(context).size.height * 0.026,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 2,
-                                  color: Colors.white,
-                                ),)
-
-
+                                    text: 'Generate',
+                                    fontSize:
+                                        MediaQuery.of(context).size.height *
+                                            0.026,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 2,
+                                    color: Colors.white,
+                                  ),
+                                )
                               ],
                             ),
                           ),
@@ -109,16 +129,23 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                           surfaceTintColor: Colors.red,
                           borderRadius: BorderRadius.circular(10),
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width * 0.031, vertical: MediaQuery.of(context).size.width * 0.017),
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.031,
+                                vertical:
+                                    MediaQuery.of(context).size.width * 0.017),
                             child: Column(
                               children: [
-
-
                                 Padding(
-                                  padding:  EdgeInsets.only(bottom: MediaQuery.of(context).size.height *.01),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .01),
                                   child: SizedBox(
-                                      width: MediaQuery.of(context).size.width * 0.438,
-                                      height: MediaQuery.of(context).size.height * 0.864,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.438,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.864,
                                     child: Material(
                                       elevation: .3,
                                       color: Colors.white,
@@ -126,18 +153,20 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                         itemCount: messages.length,
                                         itemBuilder: (context, index) {
                                           return Padding(
-                                            padding:  const EdgeInsets.symmetric(vertical: 10),
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 10),
                                             child: Text(messages[index]),
                                           );
                                         },
-                                    ),
+                                      ),
                                     ),
                                   ),
                                 ),
                                 Container(
-                                    width: MediaQuery.of(context).size.width * 0.438,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.438,
                                     child: CustomTextFormField(
-                                        icon: Icons.send,
+                                        suffixIcon: Icons.send,
                                         onPressed: () {
                                           if (sendMessage.text.isNotEmpty) {
                                             setState(() {
@@ -146,9 +175,8 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
                                             });
                                           }
                                         },
-                                        labelText: "Enter Your Message", controller: sendMessage)),
-
-
+                                        hintText: "Enter Your Message",
+                                        controller: sendMessage)),
                               ],
                             ),
                           ),
@@ -166,7 +194,8 @@ class _GenerateEventScreen2State extends State<GenerateEventScreen2> {
   }
 }
 
-Widget _buildFormField(BuildContext context, String label, String text, TextEditingController controller) {
+Widget _buildFormField(BuildContext context, String label, String text,
+    TextEditingController controller) {
   return SizedBox(
     width: MediaQuery.of(context).size.width * 0.18,
     child: Column(
@@ -181,10 +210,13 @@ Widget _buildFormField(BuildContext context, String label, String text, TextEdit
             color: AppColors.black,
           ),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-        CustomTextFormField(labelText: text, controller: controller),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.029,),
-
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        ),
+        CustomTextFormField(hintText: text, controller: controller),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.029,
+        ),
       ],
     ),
   );

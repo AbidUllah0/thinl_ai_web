@@ -54,23 +54,25 @@ class _LoginScreenState extends State<LoginScreen> {
                       TabBar(
                         dividerColor: AppColors.secondary,
                         indicator: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border(
-                            right: BorderSide(color: AppColors.primary),
-                            left: BorderSide(color: AppColors.primary),
-                            top: BorderSide(color: AppColors.primary),
-                            bottom: BorderSide(color: AppColors.primary)
-                          ),
-                          shape: BoxShape.rectangle
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border(
+                                right: BorderSide(color: AppColors.primary),
+                                left: BorderSide(color: AppColors.primary),
+                                top: BorderSide(color: AppColors.primary),
+                                bottom: BorderSide(color: AppColors.primary)),
+                            shape: BoxShape.rectangle),
                         labelColor: AppColors.primary,
                         unselectedLabelColor: AppColors.secondary,
                         indicatorColor: AppColors.primary,
                         indicatorSize: TabBarIndicatorSize.label,
                         splashBorderRadius: BorderRadius.circular(10),
                         labelStyle: const TextStyle(),
-                        unselectedLabelStyle: TextStyle(color: AppColors.secondary, fontWeight: FontWeight.w700, fontSize: 30),
-                        indicatorWeight: 5, // Increas10e the thickness of the tab indicator
+                        unselectedLabelStyle: TextStyle(
+                            color: AppColors.secondary,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 30),
+                        indicatorWeight:
+                            5, // Increas10e the thickness of the tab indicator
                         tabs: [
                           Tab(
                             text: 'Log In',
@@ -88,16 +90,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 elevation: 2,
                                 semanticContainer: true,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10), // Change the shape of the card
+                                  borderRadius: BorderRadius.circular(
+                                      10), // Change the shape of the card
                                 ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     SizedBox(
-                                      width:
-                                      MediaQuery.of(context).size.width * 0.3,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.3,
                                       child: CustomTextFormField(
-                                        labelText: 'Email',
+                                        hintText: 'Email',
                                         onPressed: () {
                                           // TODO: Add your logic here
                                         },
@@ -106,14 +109,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                     SizedBox(
                                       height:
-                                      MediaQuery.of(context).size.width *
-                                          0.01,
+                                          MediaQuery.of(context).size.width *
+                                              0.01,
                                     ),
                                     SizedBox(
-                                      width:
-                                      MediaQuery.of(context).size.width * 0.3,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.3,
                                       child: CustomTextFormField(
-                                        labelText: 'Password',
+                                        hintText: 'Password',
                                         onPressed: () {
                                           // TODO: Add your logic here
                                         },

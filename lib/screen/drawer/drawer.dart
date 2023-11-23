@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/HomePage.dart';
-
-import '../../utils/app_font_styles/app_styles.dart';
 import '../../utils/app_images/app_images.dart';
 import '../../utils/app_colors/colors.dart';
-import '../GenerateEvent/generate_event.dart';
+import '../master_dashboard/master_dashboard_view.dart';
+import '../participant_ai_assistant/participant_ai_assistant.dart';
+import '../participant_all_circle_ideas/participant_al_circle_ideas.dart';
+import '../participant_circle_leader_vote/ideas_briefing.dart';
+import '../participant_event_top_idea/event_top_idea.dart';
+import '../participant_group_chat/participant_group_chat.dart';
+import '../participant_ranking_ideas/participant_ranking_ideas.dart';
+import '../participant_top_fice_steps/top_five_steps.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
@@ -17,61 +21,25 @@ class _CustomDrawerState extends State<CustomDrawer> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    const GenerateEventScreen(),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.green,
-    ),
+    MasterDashboardView(),
+    Container(color: Colors.green),
+    Container(color: Colors.green),
+    Container(color: Colors.green),
+    Container(color: Colors.green),
+    Container(color: Colors.green),
+    ParticipantAiAssistant(),
+    Container(color: Colors.blue),
+    ParticipantGroupChat(),
+    ParticipantRankingIdeas(),
+    IdeasBriefing(),
+    ParticipantAllCircleIdeas(),
+    Container(color: Colors.green),
+    Container(color: Colors.green),
+    EventTopIdea(),
+    TopFiveSteps(),
+    Container(color: Colors.yellow),
+    Container(color: Colors.green),
+    Container(color: Colors.red),
   ];
 
   @override
@@ -83,7 +51,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
         children: [
           // Custom Drawer
           Container(
-            width: MediaQuery.of(context).size.width*0.2,
+            width: MediaQuery.of(context).size.width * 0.2,
             height: double.infinity,
             color: Colors.white30,
             child: SingleChildScrollView(
@@ -91,7 +59,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 45,),
+                  const SizedBox(
+                    height: 45,
+                  ),
                   Center(
                     child: RichText(
                       text: const TextSpan(
@@ -164,16 +134,20 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   buildDrawerItem(
                       index: 13, image: AppImages.eventDay, title: "Event Day"),
                   buildDrawerItem(
-                      index: 14, image: AppImages.report, title: "Report"),
+                      index: 14,
+                      image: AppImages.report,
+                      title: "Event’s Top Idea"),
                   buildDrawerItem(
                       index: 15,
                       image: AppImages.ideasDiscuss,
-                      title: "Ideas Discuss"),
+                      title: "5 Steps "),
                   buildDrawerItem(
                       index: 16,
                       image: AppImages.benchmarks,
-                      title: "Benchmarks"),
-                  const SizedBox(height: 196,),
+                      title: "Report Form"),
+                  const SizedBox(
+                    height: 196,
+                  ),
                   buildDrawerItem(
                       index: 17, image: AppImages.settings, title: "Settings"),
                   buildDrawerItem(

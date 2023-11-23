@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project22/utils/app_images/app_images.dart';
 
 import '../../utils/app_colors/colors.dart';
 
@@ -26,7 +27,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         buildAddEventButton(),
         IconButton(
-          icon: const Icon(Icons.notifications_none, color: AppColors.primary, size: 30),
+          icon: const Icon(Icons.notifications_none,
+              color: AppColors.primary, size: 30),
           onPressed: () {},
         ),
         buildProfileAvatar(),
@@ -48,7 +50,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         hintText: 'Search event or anything',
         hintStyle: TextStyle(color: Colors.grey.shade300),
-        contentPadding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
+        contentPadding:
+            EdgeInsets.all(MediaQuery.of(context).size.height * 0.008),
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(2),
@@ -75,7 +78,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 10),
       child: CircleAvatar(
-        backgroundImage: AssetImage('images/profile.png'),
+        backgroundImage: AssetImage(AppImages.profile),
       ),
     );
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project22/screen/drawer/drawer.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -22,10 +20,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home:  const CustomDrawer(),
+          home: CustomDrawer(),
         );
       },
     );
   }
 }
-
