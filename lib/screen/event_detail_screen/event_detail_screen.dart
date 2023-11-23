@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/participants_admin/event_detail_screen/components/countdown_timer.dart';
-import 'package:project22/screen/participants_admin/event_detail_screen/components/notificationContainer.dart';
+import 'package:project22/screen/event_detail_screen/components/countdown_timer.dart';
+import 'package:project22/screen/event_detail_screen/components/notificationContainer.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';

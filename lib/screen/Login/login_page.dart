@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project22/screen/participants_admin/drawer/drawer.dart';
+import 'package:project22/screen/drawer/drawer.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_images/app_images.dart';
 import 'package:project22/widget/custom_text/customtext.dart';

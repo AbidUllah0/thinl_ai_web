@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project22/provider/event_screen_controller.dart';
 import 'package:project22/provider/feedback_controller.dart';
-import 'package:project22/screen/participants_admin/drawer/drawer.dart';
+import 'package:project22/screen/drawer/drawer.dart';
 import 'package:provider/provider.dart';
 
 void main() {

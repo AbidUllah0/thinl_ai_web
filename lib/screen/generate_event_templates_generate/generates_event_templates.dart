@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/participants_admin/generate_event_templates_generate/components/textfiled_widget.dart';
+import 'package:project22/screen/generate_event_templates_generate/components/textfiled_widget.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';

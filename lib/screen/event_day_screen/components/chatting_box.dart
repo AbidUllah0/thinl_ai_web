@@ -1,7 +1,7 @@
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:project22/model/every_day_model.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/chat_textfield.dart';
+import 'package:project22/screen/event_day_screen/components/chat_textfield.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/custom_text/customtext.dart';

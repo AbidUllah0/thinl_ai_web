@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project22/provider/event_screen_controller.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/dafault_container.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/ideas_screen.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/presentation_screen.dart';
+import 'package:project22/screen/event_day_screen/components/dafault_container.dart';
+import 'package:project22/screen/event_day_screen/components/ideas_screen.dart';
+import 'package:project22/screen/event_day_screen/components/presentation_screen.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/app_bar/appbar.dart';

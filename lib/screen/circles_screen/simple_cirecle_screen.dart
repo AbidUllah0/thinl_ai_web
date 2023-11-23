@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/participants_admin/circles_screen/components/table_heading_widget.dart';
-import 'package:project22/screen/participants_admin/circles_screen/components/table_row_widget.dart';
+import 'package:project22/screen/circles_screen/components/table_heading_widget.dart';
+import 'package:project22/screen/circles_screen/components/table_row_widget.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/utils/app_images/app_images.dart';

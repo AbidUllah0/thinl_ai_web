@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/video_player.dart';
+import 'package:project22/screen/event_day_screen/components/video_player.dart';
 import 'package:project22/utils/app_colors/colors.dart';
 import 'package:project22/utils/app_constants/app_constant.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';

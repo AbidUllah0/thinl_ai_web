@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/chatting_box.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/ideas_screen.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/presentation_screen.dart';
-import 'package:project22/screen/participants_admin/event_day_screen/components/video_player.dart';
+import 'package:project22/screen/event_day_screen/components/chatting_box.dart';
+import 'package:project22/screen/event_day_screen/components/ideas_screen.dart';
+import 'package:project22/screen/event_day_screen/components/presentation_screen.dart';
+import 'package:project22/screen/event_day_screen/components/video_player.dart';
 import 'package:project22/utils/app_font_styles/app_styles.dart';
 import 'package:project22/widget/custom_text/customtext.dart';
 
